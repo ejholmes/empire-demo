@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ORG=ejholmes
+
+set -e
+
+# Create the router app first and make it public. The other apps will be private.
+emp create router
+emp domain-add router.$ORG
+
+for app in router api web; do
+  docker build -t $ORG/$app ./$app
+  docker push $ORG/$app
+  emp deploy $ORG/$app
+done
