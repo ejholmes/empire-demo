@@ -1,0 +1,2 @@
+web: ./bin/web
+worker: ruby worker.rb

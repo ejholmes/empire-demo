@@ -4,10 +4,11 @@ router:
     - "8080:80"
   volumes:
     - "./router/nginx.conf:/etc/nginx/nginx.conf:ro"
-  #links:
-    #- api
-#web:
-  #build: ./web
+    - "./router/dnsmasq.conf:/etc/dnsmasq.conf:ro"
+  links:
+    - web
+web:
+  build: ./web
   #links:
     #- api
 #api:
