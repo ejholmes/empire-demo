@@ -6,6 +6,8 @@ This is a set of applications to demo the following architecture in an Empire en
 * Routes to an internal frontend app.
 * Frontend app talks to an internal API.
 
+![](./architecture.png)
+
 ## Local
 
 To run this environment locally:
