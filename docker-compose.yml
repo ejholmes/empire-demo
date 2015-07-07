@@ -3,7 +3,7 @@ router:
   ports:
     - "8080:80"
   volumes:
-    - "./router/nginx.conf:/etc/nginx/nginx.conf:ro"
+    - "./router/nginx.conf.erb:/tmp/nginx.conf.erb:ro"
     - "./router/dnsmasq.conf:/etc/dnsmasq.conf:ro"
   links:
     - web
