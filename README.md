@@ -16,6 +16,12 @@ To run this environment locally:
 docker-compose up
 ```
 
+Then open the web client in your browser:
+
+```
+open "http://$(boot2docker ip):8080"
+```
+
 ## Remote
 
 To run this in an Empire environment:
