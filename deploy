@@ -4,6 +4,8 @@ ORG=ejholmes
 
 set -e
 
+read -p "EMPIRE_API_URL is $EMPIRE_API_URL. Enter to continue..."
+
 # Create the router app first and make it public. The other apps will be private.
 emp create router
 emp domain-add router.$ORG

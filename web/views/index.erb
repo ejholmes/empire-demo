@@ -1,0 +1,19 @@
+<h1>Todos</h1>
+
+<form action="/todos" method="POST">
+  <input type="text" name="text"></input>
+  <button type="submit">Create</button>
+</form>
+
+<% if @todos.count > 0 %>
+  <ul>
+  <% @todos.each do |todo| %>
+    <li>
+      <%= todo['text'] %>
+      <form action="/todos/<%= todo['id'] %>/delete" method="POST"><button type="submit">Delete</button></form>
+    </li>
+  <% end %>
+  </ul>
+<% else %>
+  No todos
+<% end %>

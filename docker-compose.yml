@@ -9,7 +9,7 @@ router:
     - web
 web:
   build: ./web
-  #links:
-    #- api
-#api:
-  #build: ./api
+  links:
+    - api
+api:
+  build: ./api
