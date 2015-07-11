@@ -7,6 +7,8 @@ router:
     - "./router/dnsmasq.conf:/etc/dnsmasq.conf:ro"
   links:
     - web
+  dns_search:
+    - "empire"
 web:
   build: ./web
   links:
